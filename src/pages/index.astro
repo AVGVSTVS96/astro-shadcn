@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
-import { ModeToggle } from '@/components/ModeToggle';
-import { NavigationMenuDemo } from '@/components/NavMenu';
+import NavBar from '@/components/NavBar.astro';
 ---
 <script is:inline>
 	const getThemePreference = () => {
@@ -30,11 +29,7 @@ import { NavigationMenuDemo } from '@/components/NavMenu';
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="">
-		<nav class="flex items-center justify-between px-6 py-2 border-b">
-			<span class="text-2xl font-semibold tracking-tight">Astro</span>
-			<NavigationMenuDemo client:load />
-			<ModeToggle client:load />
-		</nav>
+	<body>
+		<NavBar />
 	</body>
 </html>
