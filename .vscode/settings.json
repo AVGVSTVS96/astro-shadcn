@@ -1,0 +1,7 @@
+{
+  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.configPath": "./prettierrc.yaml",
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
