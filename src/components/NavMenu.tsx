@@ -102,7 +102,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>
         </NavigationMenuItem>
