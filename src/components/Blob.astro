@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+const { class: className, ...attrs } = Astro.props;
+
+interface Props extends HTMLAttributes<'div'> {
+  class: string;
+}
+---
+
+<div
+  {...attrs}
+  class:list={[
+    'absolute inset-0 scale-[0.60] transform rounded-full bg-gradient-to-r from-blue-500/50 to-teal-500/50 blur-[100px]',
+    className,
+  ]}>
+</div>

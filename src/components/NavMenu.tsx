@@ -11,41 +11,41 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
+const projects: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "FastGPT",
+    href: "https://github.com/AVGVSTVS96/FastGPT",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "A high performance OpenAI GPT-4 chat app built with FastAPI. Featuring asynchronous requests, streaming responses, syntax highlighting, and more!",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "FlaskGPT",
+    href: "https://github.com/AVGVSTVS96/flaskGPT",
     description:
-      "For sighted users to preview content available behind a link.",
+      "A customizable GPT-3.5/4 chat application built with Flask and plain HTML, CSS, and JavaScript",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "astroSite",
+    href: "https://github.com/AVGVSTVS96/astroSite",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Built with Astro and TailwindCSS, this MPA portfolio & blog site is version 3 of my personal website, my first MPA.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "flaskWebsite",
+    href: "https://github.com/AVGVSTVS96/flaskWebsite",
+    description: "This is version 2 of personal website built with TailwindCSS and Flask.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "reactGPT",
+    href: "https://github.com/AVGVSTVS96/reactGPT",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "reactGPT is a simple, high performance GPT chat application built with FastAPI, React, and OpenAI's API.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "astro-shadcn",
+    href: "https://github.com/AVGVSTVS96/astro-shadcn",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "This websites GitHub repo, built with Astro, TailwindCSS, and shadcn/ui components.",
   },
 ]
 
@@ -86,16 +86,16 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
+              {projects.map((project) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  key={project.title}
+                  title={project.title}
+                  href={project.href}
                 >
-                  {component.description}
+                  {project.description}
                 </ListItem>
               ))}
             </ul>
