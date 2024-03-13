@@ -15,7 +15,7 @@ const TextAnimation = () => {
   };
 
   const child = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: 4 },
     visible: { opacity: 1, y: 0}
   };
 
