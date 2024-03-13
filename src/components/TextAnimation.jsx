@@ -15,10 +15,8 @@ const TextAnimation = () => {
   };
 
   const child = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-    },
+    hidden: { opacity: 0, y: 4 },
+    visible: { opacity: 1, y: 0}
   };
 
   return (
@@ -29,7 +27,11 @@ const TextAnimation = () => {
       className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
+        <motion.span
+          variants={child}
+          key={index}
+          className='inline-block'
+        >
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
