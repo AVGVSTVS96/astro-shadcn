@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import NavBar from '@/components/NavBar.astro';
 import Hero from '@/components/Hero.astro';
 import Blob from '@/components/Blob.astro';
@@ -29,17 +29,8 @@ import Blob from '@/components/Blob.astro';
   }
 </script>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="min-h-dvh">
-    <NavBar />
-    <Blob class="-z-10" />
-    <Hero />
-  </body>
-</html>
+<BaseLayout title="astro + shadcn/ui" description="Built with Astro, TailwindCSS, and shadcn/ui">
+  <NavBar />
+  <Blob class="-z-10" />
+  <Hero />
+</BaseLayout>
