@@ -1,6 +1,6 @@
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
+import * as React from 'react';
+import { CodeXml } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,45 +9,46 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from '@/components/ui/navigation-menu';
 
 const projects: { title: string; href: string; description: string }[] = [
   {
-    title: "FastGPT",
-    href: "https://github.com/AVGVSTVS96/FastGPT",
+    title: 'FastGPT',
+    href: 'https://github.com/AVGVSTVS96/FastGPT',
     description:
-      "A high performance OpenAI GPT-4 chat app built with FastAPI. Featuring asynchronous requests, streaming responses, syntax highlighting, and more!",
+      'A high performance OpenAI GPT-4 chat app built with FastAPI. Featuring asynchronous requests, streaming responses, syntax highlighting, and more!',
   },
   {
-    title: "FlaskGPT",
-    href: "https://github.com/AVGVSTVS96/flaskGPT",
+    title: 'FlaskGPT',
+    href: 'https://github.com/AVGVSTVS96/flaskGPT',
     description:
-      "A customizable GPT-3.5/4 chat application built with Flask and plain HTML, CSS, and JavaScript",
+      'A customizable GPT-3.5/4 chat application built with Flask and plain HTML, CSS, and JavaScript',
   },
   {
-    title: "astroSite",
-    href: "https://github.com/AVGVSTVS96/astroSite",
+    title: 'astroSite',
+    href: 'https://github.com/AVGVSTVS96/astroSite',
     description:
-      "Built with Astro and TailwindCSS, this MPA portfolio & blog site is version 3 of my personal website, my first MPA.",
+      'Built with Astro and TailwindCSS, this MPA portfolio & blog site is version 3 of my personal website, my first MPA.',
   },
   {
-    title: "flaskWebsite",
-    href: "https://github.com/AVGVSTVS96/flaskWebsite",
-    description: "This is version 2 of personal website built with TailwindCSS and Flask.",
+    title: 'flaskWebsite',
+    href: 'https://github.com/AVGVSTVS96/flaskWebsite',
+    description:
+      'This is version 2 of personal website built with TailwindCSS and Flask.',
   },
   {
-    title: "reactGPT",
-    href: "https://github.com/AVGVSTVS96/reactGPT",
+    title: 'reactGPT',
+    href: 'https://github.com/AVGVSTVS96/reactGPT',
     description:
       "reactGPT is a simple, high performance GPT chat application built with FastAPI, React, and OpenAI's API.",
   },
   {
-    title: "astro-shadcn",
-    href: "https://github.com/AVGVSTVS96/astro-shadcn",
+    title: 'astro-shadcn',
+    href: 'https://github.com/AVGVSTVS96/astro-shadcn',
     description:
-      "This websites GitHub repo, built with Astro, TailwindCSS, and shadcn/ui components.",
+      'This websites GitHub repo, built with Astro, TailwindCSS, and shadcn/ui components.',
   },
-]
+];
 
 export function NavigationMenuDemo() {
   return (
@@ -61,8 +62,7 @@ export function NavigationMenuDemo() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
+                    href="/">
                     <div className="mb-2 mt-4 text-lg font-medium">
                       shadcn/ui
                     </div>
@@ -93,8 +93,7 @@ export function NavigationMenuDemo() {
                 <ListItem
                   key={project.title}
                   title={project.title}
-                  href={project.href}
-                >
+                  href={project.href}>
                   {project.description}
                 </ListItem>
               ))}
@@ -102,18 +101,18 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-            <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
+          <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+            Documentation
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
@@ -121,18 +120,20 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className,
           )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          {...props}>
+          <div className="text-sm flex justify-between font-medium leading-none">
+            {title}
+            <CodeXml className="size-5" />
+          </div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = 'ListItem';
