@@ -1,6 +1,12 @@
 ---
 import '../styles/global.css';
-const { description, title } = Astro.props;
+const { description, title, class: className } = Astro.props;
+
+interface Props {
+  description: string;
+  title: string;
+  class: string;
+}
 ---
 
 <html lang="en">
@@ -13,7 +19,7 @@ const { description, title } = Astro.props;
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body class="min-h-dvh">
+  <body class:list={['min-h-dvh', className]}>
     <slot />
   </body>
 </html>
