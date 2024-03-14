@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
-const TextAnimation = () => {
-  const text = 'Bassim Shahidy';
-  const letters = Array.from(text);
+type TextAnimationProps = {};
 
-  const container = {
+const TextAnimation: React.FC<TextAnimationProps> = () => {
+  const text: string = 'Bassim Shahidy';
+  const letters: string[] = Array.from(text);
+
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -14,7 +16,7 @@ const TextAnimation = () => {
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: { opacity: 0, y: 4 },
     visible: { opacity: 1, y: 0 },
   };
@@ -25,7 +27,7 @@ const TextAnimation = () => {
       initial="hidden"
       animate="visible"
       className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-      {letters.map((letter, index) => (
+      {letters.map((letter: string, index: number) => (
         <motion.span variants={child} key={index} className="inline-block">
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
