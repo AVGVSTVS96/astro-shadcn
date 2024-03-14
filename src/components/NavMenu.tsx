@@ -93,7 +93,8 @@ export function NavigationMenuDemo() {
                 <ListItem
                   key={project.title}
                   title={project.title}
-                  href={project.href}>
+                  href={project.href}
+                  project>
                   {project.description}
                 </ListItem>
               ))}
@@ -110,10 +111,17 @@ export function NavigationMenuDemo() {
   );
 }
 
+type ListItemProps = React.ComponentPropsWithoutRef<'a'> & { 
+  project?: boolean; 
+  className?: string; 
+  title: string; 
+  children?: React.ReactNode; 
+};
+
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<'a'> & ListItemProps
+>(({ className, title, children, project, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -124,7 +132,7 @@ const ListItem = React.forwardRef<
             className,
           )}
           {...props}>
-          <div className="text-sm flex justify-between font-medium leading-none">
+          <div className="flex justify-between text-sm font-medium leading-none">
             {title}
             <CodeXml className="size-4" />
           </div>
