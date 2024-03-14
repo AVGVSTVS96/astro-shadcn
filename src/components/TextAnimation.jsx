@@ -9,14 +9,14 @@ const TextAnimation = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.10,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const child = {
     hidden: { opacity: 0, y: 4 },
-    visible: { opacity: 1, y: 0}
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -24,14 +24,9 @@ const TextAnimation = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'
-    >
+      className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
       {letters.map((letter, index) => (
-        <motion.span
-          variants={child}
-          key={index}
-          className='inline-block'
-        >
+        <motion.span variants={child} key={index} className="inline-block">
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}

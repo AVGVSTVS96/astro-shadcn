@@ -1,5 +1,5 @@
 ---
-import TextAnimation from './TextAnimation.jsx'
+import TextAnimation from './TextAnimation.jsx';
 const { class: className } = Astro.props;
 
 interface Props {
@@ -7,12 +7,15 @@ interface Props {
 }
 ---
 
-<section class:list={["w-full py-12 md:py-24 lg:py-32", className]}>
-    <div class="container space-y-4 px-4">
-        <div class="flex flex-col items-center justify-center space-y-2 text-center">
-            <!-- <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Bassim Shahidy</h1> -->
-            <TextAnimation client:load />
-            <p class="mx-auto md:text-xl">Crafting digital experiences through beautiful design and elegant code.</p>
-        </div>
+<section class:list={['w-full py-12 md:py-24 lg:py-32', className]}>
+  <div class="container space-y-4 px-4">
+    <div
+      class="flex flex-col items-center justify-center space-y-2 text-center">
+      <!-- <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Bassim Shahidy</h1> -->
+      <TextAnimation client:load />
+      <p class="mx-auto md:text-xl">
+        Crafting digital experiences through beautiful design and elegant code.
+      </p>
     </div>
+  </div>
 </section>
