@@ -1,13 +1,16 @@
 ---
-import { ModeToggle } from "@/components/ModeToggle";
-import { NavigationMenuDemo } from "@/components/NavMenu";
+import { ModeToggle } from '@/components/ModeToggle';
+import { NavigationMenuDemo } from '@/components/NavMenu';
 ---
 
-<nav class="flex items-center justify-between px-6 py-2 border-b">
+<nav class="flex items-center justify-between border-b px-6 py-2">
   <a href="/">
-    <span class="text-xl py-1.5 px-3 font-semibold tracking-tighter rounded-md hover:bg-accent">bassim</span> 
+    <span
+      class="rounded-md px-3 py-1.5 text-xl font-semibold tracking-tighter hover:bg-accent">
+      bassim
+    </span>
   </a>
-  <div class="flex w-full h-full justify-center">
+  <div class="flex h-full w-full justify-center">
     <NavigationMenuDemo client:load />
   </div>
   <ModeToggle client:load />
