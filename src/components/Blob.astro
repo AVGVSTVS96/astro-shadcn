@@ -1,17 +1,23 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import { motion } from 'framer-motion';
 
-const { class: className, ...attrs } = Astro.props;
+const { class: className } = Astro.props as Props;
 
-interface Props extends HTMLAttributes<'div'> {
+interface Props {
   class: string;
 }
 ---
 
-<div
-  {...attrs}
-  class:list={[
-    'absolute inset-0 scale-[0.60] transform rounded-full bg-gradient-to-r from-blue-500/50 to-teal-500/50 blur-[100px]',
-    className,
-  ]}>
+<div class:list={['fixed inset-0 flex items-center justify-center', className]}>
+  <motion.div
+    client:load
+    initial={{ scaleY: 1 }}
+    animate={{
+      scaleY: [1.5, 1, 1.5],
+      scaleX: [1, 1.5, 1],
+      rotate: 360,
+    }}
+    transition={{ duration: 15, repeat: 1000000, repeatType: 'reverse' }}
+    className={`h-[300px] w-[300px] rounded-full bg-gradient-to-r from-blue-500/90 to-teal-500/90 blur-3xl`}
+  />
 </div>
