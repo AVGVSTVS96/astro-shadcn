@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { CodeXml } from 'lucide-react';
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { cn } from '@/lib/utils';
 import {
