@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { CodeXml } from 'lucide-react';
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -134,7 +135,7 @@ const ListItem = React.forwardRef<
           {...props}>
           <div className='flex justify-between text-sm font-medium leading-none'>
             {title}
-            {project && <CodeXml className='size-4' />}
+            {project && <GitHubLogoIcon className='size-4' />}
           </div>
           <p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
             {children}
