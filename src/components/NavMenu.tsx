@@ -57,29 +57,29 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
+            <ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
+              <li className='row-span-3'>
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/">
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
+                    href='/'>
+                    <div className='mb-2 mt-4 text-lg font-medium'>
                       shadcn/ui
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
+                    <p className='text-sm leading-tight text-muted-foreground'>
                       Beautifully designed components built with Radix UI and
                       Tailwind CSS.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href='/docs' title='Introduction'>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href='/docs/installation' title='Installation'>
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href='/docs/primitives/typography' title='Typography'>
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
@@ -88,7 +88,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
               {projects.map((project) => (
                 <ListItem
                   key={project.title}
@@ -102,7 +102,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink href='/' className={navigationMenuTriggerStyle()}>
             Documentation
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -111,11 +111,11 @@ export function NavigationMenuDemo() {
   );
 }
 
-type ListItemProps = React.ComponentPropsWithoutRef<'a'> & { 
-  project?: boolean; 
-  className?: string; 
-  title: string; 
-  children?: React.ReactNode; 
+type ListItemProps = React.ComponentPropsWithoutRef<'a'> & {
+  project?: boolean;
+  className?: string;
+  title: string;
+  children?: React.ReactNode;
 };
 
 const ListItem = React.forwardRef<
@@ -132,11 +132,11 @@ const ListItem = React.forwardRef<
             className,
           )}
           {...props}>
-          <div className="flex justify-between text-sm font-medium leading-none">
+          <div className='flex justify-between text-sm font-medium leading-none'>
             {title}
-            {project && <CodeXml className="size-4" />}
+            {project && <CodeXml className='size-4' />}
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
             {children}
           </p>
         </a>

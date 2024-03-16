@@ -14,7 +14,7 @@ export function ModeToggle() {
       selectedTheme === 'dark' ||
       (selectedTheme === 'system' &&
         window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
+
     document.documentElement.classList.toggle('dark', isDark);
 
     localStorage.setItem('theme', selectedTheme);
