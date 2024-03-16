@@ -24,11 +24,11 @@ const TextAnimation: React.FC<TextAnimationProps> = () => {
   return (
     <motion.div
       variants={container}
-      initial="hidden"
-      animate="visible"
-      className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+      initial='hidden'
+      animate='visible'
+      className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
       {letters.map((letter: string, index: number) => (
-        <motion.span variants={child} key={index} className="inline-block">
+        <motion.span variants={child} key={index} className='inline-block'>
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
