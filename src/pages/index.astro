@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import NavBar from '@astro/NavBar.astro';
 import Hero from '@astro/Hero.astro';
 import Blob from '@astro/Blob.astro';
+import { CommandDialogDemo } from '@react/CommandMenu';
 ---
 
 <script is:inline>
@@ -33,4 +34,5 @@ import Blob from '@astro/Blob.astro';
   <NavBar />
   <Blob class='-z-10' />
   <Hero />
+  <CommandDialogDemo client:load />
 </BaseLayout>
