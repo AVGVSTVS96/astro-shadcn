@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommitType(chore)"],
+  "extends": ["config:recommended"],
+  "semanticCommitType": "chore",
   "prHourlyLimit": 6,
   "packageRules": [
     {
