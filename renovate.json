@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "prHourlyLimit": 6,
+  "packageRules": [
+    {
+      "groupName": "Astro Adapters and Integrations",
+      "matchPackagePatterns": ["^@astrojs/"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Astro Adapters and Integrations group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+    },
+    {
+      "groupName": "Radix",
+      "matchPackagePatterns": ["^@radix-ui/"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Radix group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+    },
+    {
+      "groupName": "Types",
+      "matchPackagePatterns": ["^@types/"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Types group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+    },
+    {
+      "groupName": "Prettier",
+      "matchPackagePatterns": ["prettier"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "commitMessageAction": "Update",
+      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Prettier group{{/if}}",
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+    }
+  ]
+}
