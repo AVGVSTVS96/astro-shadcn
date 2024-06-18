@@ -7,33 +7,33 @@
       "groupName": "Astro Adapters and Integrations",
       "matchPackagePatterns": ["^@astrojs/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageAction": "Update",
+      "commitMessageAction": "Upgrade",
       "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}multiple dependencies in Astro Adapters and Integrations group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.fromVersion}} -> {{upgrades.0.toVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
     },
     {
       "groupName": "Radix",
       "matchPackagePatterns": ["^@radix-ui/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageAction": "Update",
+      "commitMessageAction": "Upgrade",
       "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}multiple dependencies in Radix group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.fromVersion}} -> {{upgrades.0.toVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
     },
     {
       "groupName": "Types",
       "matchPackagePatterns": ["^@types/"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageAction": "Update",
+      "commitMessageAction": "Upgrade",
       "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}multiple dependencies in Types group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.fromVersion}} -> {{upgrades.0.toVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
     },
     {
       "groupName": "Prettier",
       "matchPackagePatterns": ["prettier"],
       "matchUpdateTypes": ["minor", "patch"],
-      "commitMessageAction": "Update",
+      "commitMessageAction": "Upgrade",
       "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}multiple dependencies in Prettier group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
+      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.fromVersion}} -> {{upgrades.0.toVersion}}{{else}}{{length upgrades}} dependencies{{/if}}"
     }
   ]
 }
