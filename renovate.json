@@ -8,32 +8,32 @@
       "matchPackagePatterns": ["^@astrojs/"],
       "matchUpdateTypes": ["minor", "patch"],
       "commitMessageAction": "Update",
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Astro Adapters and Integrations group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+      "commitMessageTopic": "Astro Adapters and Integrations",
+      "commitMessageExtra": "{{length upgrades}} dependencies in Astro Adapters and Integrations group"
     },
     {
       "groupName": "Radix",
       "matchPackagePatterns": ["^@radix-ui/"],
       "matchUpdateTypes": ["minor", "patch"],
       "commitMessageAction": "Update",
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Radix group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+      "commitMessageTopic": "Radix",
+      "commitMessageExtra": "{{length upgrades}} dependencies in Radix group"
     },
     {
       "groupName": "Types",
       "matchPackagePatterns": ["^@types/"],
       "matchUpdateTypes": ["minor", "patch"],
       "commitMessageAction": "Update",
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Types group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+      "commitMessageTopic": "Types",
+      "commitMessageExtra": "{{length upgrades}} dependencies in Types group"
     },
     {
       "groupName": "Prettier",
       "matchPackagePatterns": ["prettier"],
       "matchUpdateTypes": ["minor", "patch"],
       "commitMessageAction": "Update",
-      "commitMessageTopic": "{{#if (eq (length upgrades) 1)}}{{upgrades.0.depName}}{{else}}dependencies in Prettier group{{/if}}",
-      "commitMessageExtra": "{{#if (eq (length upgrades) 1)}}to {{upgrades.0.newVersion}}{{else}}{{length upgrades}} updates{{/if}}"
+      "commitMessageTopic": "Prettier",
+      "commitMessageExtra": "{{length upgrades}} dependencies in Prettier group"
     }
   ]
 }
