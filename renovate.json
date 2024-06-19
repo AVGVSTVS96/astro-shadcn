@@ -15,23 +15,19 @@
   "packageRules": [
     {
       "groupName": "Prettier",
-      "matchPackagePatterns": ["^prettier", "prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchPackagePatterns": ["prettier", "prettier-plugin-astro", "prettier-plugin-tailwindcss"]
     },
     {
       "groupName": "Tailwind",
-      "matchPackagePatterns": ["tailwind", "clsx", "class-variance-authority"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchPackagePatterns": ["tailwind", "clsx", "class-variance-authority"]
     },
     {
       "groupName": "Components",
-      "matchPackagePatterns": ["@radix-ui", "cmdk"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchPackagePatterns": ["@radix-ui", "cmdk"]
     },
     {
       "groupName": "Astro",
-      "matchPackagePatterns": ["^astro", "@astrojs"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchPackagePatterns": ["^astro", "@astrojs"]
     }
   ]
 }
