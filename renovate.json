@@ -16,11 +16,20 @@
   "packageRules": [
     {
       "groupName": "Prettier",
-      "matchPackagePatterns": ["^prettier"]
+      "matchPackagePatterns": ["^prettier"],
+      "commitMessageSuffix": "dependencies"
     },
     {
-      "groupName": "Components",
-      "matchPackagePatterns": ["@radix-ui/*"]
+      "groupName": "Components, icons, and animation utilities",
+      "matchPackagePatterns": ["@radix-ui/*", "cmdk", "lucide-react", "framer-motion"]
+    },
+    {
+      "groupName": "TailwindCSS",
+      "matchPackagePatterns": ["^tailwind", "clsx", "class-variance-authority"]
+    },
+    {
+      "extends": ["monorepo:astro"],
+      "matchPackagePatterns": ["^@astrojs"]
     }
   ]
 }
