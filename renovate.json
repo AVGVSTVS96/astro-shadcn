@@ -12,22 +12,11 @@
   ],
   "prHourlyLimit": 10,
   "prConcurrentLimit": 10,
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "groupName": "Prettier",
       "matchPackagePatterns": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
-    },
-    {
-      "groupName": "Tailwind",
-      "matchPackagePatterns": ["tailwind", "clsx", "class-variance-authority"]
-    },
-    {
-      "groupName": "Components",
-      "matchPackagePatterns": ["@radix-ui", "cmdk"]
-    },
-    {
-      "groupName": "Astro",
-      "matchPackagePatterns": ["^astro", "@astrojs"]
     }
   ]
 }
