@@ -29,7 +29,7 @@
     },
     {
       "groupName": "Astro",
-      "matchPackagePatterns": ["astro", "@astrojs"],
+      "matchPackagePatterns": ["^astro", "@astrojs"],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]
