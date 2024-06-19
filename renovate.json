@@ -10,13 +10,17 @@
     "replacements:all",
     "workarounds:all"
   ],
-  "prHourlyLimit": 10,
-  "prConcurrentLimit": 10,
+  "prHourlyLimit": 20,
+  "prConcurrentLimit": 20,
   "rangeStrategy": "bump",
   "packageRules": [
     {
       "groupName": "Prettier",
-      "matchPackagePatterns": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+      "matchPackagePatterns": ["^prettier"]
+    },
+    {
+      "groupName": "Components",
+      "matchPackagePatterns": ["@radix-ui/*"]
     }
   ]
 }
