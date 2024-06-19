@@ -10,22 +10,30 @@
     "replacements:all",
     "workarounds:all"
   ],
-  "prHourlyLimit": 20,
-  "prConcurrentLimit": 20,
+  "prHourlyLimit": 10,
   "rangeStrategy": "bump",
+  "labels": ["dependencies"],
+  "commitMessageTopic": "{{depName}}",
   "packageRules": [
     {
-      "groupName": "Prettier",
-      "matchPackagePatterns": ["^prettier"],
-      "commitMessageSuffix": "dependencies"
+      "groupName": "dev-dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "semanticCommitScope": "dev-deps",
+      "commitMessageSuffix": "group"
     },
     {
-      "groupName": "Components, icons, and animation utilities",
-      "matchPackagePatterns": ["@radix-ui/*", "cmdk", "lucide-react", "framer-motion"]
+      "groupName": "Components, icons, and styling libraries",
+      "matchPackagePatterns": [
+        "^@radix-ui/",
+        "cmdk",
+        "lucide-react",
+        "framer-motion"
+      ]
     },
     {
       "groupName": "TailwindCSS",
-      "matchPackagePatterns": ["^tailwind", "clsx", "class-variance-authority"]
+      "matchPackagePatterns": ["^tailwind", "clsx", "class-variance-authority"],
+      "commitMessageSuffix": "dependencies"
     },
     {
       "extends": ["monorepo:astro"],
