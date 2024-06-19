@@ -10,11 +10,12 @@
     "replacements:all",
     "workarounds:all"
   ],
-  "prHourlyLimit": 6,
+  "prHourlyLimit": 10,
+  "prConcurrentLimit": 10,
   "packageRules": [
     {
       "groupName": "Prettier",
-      "matchPackagePatterns": ["^prettier"],
+      "matchPackagePatterns": ["^prettier", "prettier-plugin-*"],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
