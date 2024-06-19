@@ -15,7 +15,7 @@
   "packageRules": [
     {
       "groupName": "Prettier",
-      "matchPackagePatterns": ["^prettier", "prettier-plugin-*"],
+      "matchPackagePatterns": ["^prettier", "prettier-plugin-astro", "prettier-plugin-tailwindcss"],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
