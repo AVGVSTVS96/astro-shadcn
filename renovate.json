@@ -1,12 +1,35 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "semanticCommitType": "chore",
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticCommitType(chore)",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:definitelyTyped",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
+  ],
   "prHourlyLimit": 6,
   "packageRules": [
     {
       "groupName": "Prettier",
       "matchPackagePatterns": ["^prettier"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "Tailwind",
+      "matchPackagePatterns": ["tailwind", "clsx", "class-variance-authority"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "Components",
+      "matchPackagePatterns": ["@radix-ui", "cmdk"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "Astro",
+      "matchPackagePatterns": ["astro", "@astrojs"],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]
