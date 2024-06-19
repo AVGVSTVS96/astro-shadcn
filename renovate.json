@@ -29,7 +29,7 @@
     },
     {
       "extends": ["monorepo:astro"],
-      "matchPackagePatterns": ["^@astrojs"]
+      "matchPackagePatterns": ["@astrojs/check"]
     }
   ]
 }
